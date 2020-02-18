@@ -22,6 +22,6 @@ public class Character {
     
     @Override
     public String toString(){
-        return "My name is " + name + " and i am at x:" + x + " y: " + y;
+        return "my name is" + name + "and i am at x:" + x + "y" + y;
     }
 }
