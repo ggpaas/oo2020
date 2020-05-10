@@ -5,8 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import net.bytebuddy.asm.Advice.Return;
 
 @Entity
 public class Ingredient {

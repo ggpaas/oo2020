@@ -13,12 +13,18 @@ public class IngredientService {
     //see on viit repositoryile
     private IngredientRepository ingredientRepository;
 
+    //konstruktor, loob uue IngredientServici ja ühendab selle repoga
     public IngredientService(IngredientRepository ingredientRepository){
         this.ingredientRepository = ingredientRepository;
     }
 
+    //meetod, loob uue ingredienti 
     public Ingredient createIngredient(String foodName, int proteinPct, int fatPct, int carbohydratesPct){
         Ingredient ingredient = new Ingredient(foodName, proteinPct, fatPct, carbohydratesPct);
+
+        if (ingredient.getFoodName() == null) {
+            return null;
+        }
         //salvestab siin andmebaasi
         ingredientRepository.save(ingredient);
         return ingredient;
